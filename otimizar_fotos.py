@@ -4,9 +4,11 @@ Uso:  python otimizar_fotos.py
 - Lê JPG/PNG/WEBP/HEIC* de midia/originais (em ordem alfabética)
 - Gera midia/fotos/NN.webp (até 1400px) e midia/fotos/NN-thumb.webp (600px)
 - Reescreve js/fotos.js, que a galeria lê automaticamente
+- O nome do arquivo vira a legenda: "06-Selagem - antes.jpg" -> "Selagem - antes"
 (*HEIC só se o pillow-heif estiver instalado)
 """
 import json
+import re
 from pathlib import Path
 
 from PIL import Image, ImageOps
@@ -43,13 +45,15 @@ def main():
         nome = f"{i:02d}"
         w, h = salvar(img, SAIDA / f"{nome}.webp", 1400)
         salvar(img, SAIDA / f"{nome}-thumb.webp", 600)
+        legenda = re.sub(r"^\d+[-_ ]*", "", arquivo.stem).strip()
         fotos.append({"src": f"midia/fotos/{nome}.webp",
-                      "thumb": f"midia/fotos/{nome}-thumb.webp", "w": w, "h": h})
+                      "thumb": f"midia/fotos/{nome}-thumb.webp", "w": w, "h": h,
+                      "legenda": legenda})
         print(f"{arquivo.name} -> {nome}.webp ({w}x{h})")
 
     MANIFESTO.write_text(
         "// Gerado por otimizar_fotos.py - não editar à mão\n"
-        f"window.FOTOS = {json.dumps(fotos, indent=2)};\n",
+        f"window.FOTOS = {json.dumps(fotos, indent=2, ensure_ascii=False)};\n",
         encoding="utf-8",
     )
     print(f"{len(fotos)} foto(s) na galeria.")

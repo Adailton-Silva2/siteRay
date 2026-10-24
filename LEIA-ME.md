@@ -6,15 +6,14 @@
 Site estático (HTML/CSS/JS, sem build). Para ver localmente, abra `index.html` no navegador.
 
 ## Status (24/10/2026)
-Pronto e publicado, porém **aguardando fotos da Ray** (pedido enviado a ela pelo WhatsApp).
-Hoje o site usa só 2 recortes pequenos do print do Beacons.
+Pronto e publicado, já com as fotos reais da Ray (11 trabalhos na galeria + foto dela).
 
 ### Pendências
-- [ ] **Foto do topo (hero)**: cabelo de costas/lado, sem rosto, vertical, ≥1000px.
+- [x] **Foto do topo (hero)**: cabelo de costas/lado, sem rosto, vertical, ≥1000px.
       Nomear para ficar 1º em ordem alfabética (ex.: `01-destaque.jpg`).
-- [ ] **Foto da Ray** (Sobre + selinho do topo): vertical, peito pra cima, ≥800px.
+- [x] **Foto da Ray** (Sobre + selinho do topo): vertical, peito pra cima, ≥800px.
       Substituir `midia/fotos/ray.webp` (hoje borrada, recorte de 152px).
-- [ ] **Galeria**: 8–12 fotos **sem rosto das clientes**, de preferência uma por serviço
+- [x] **Galeria**: 8–12 fotos **sem rosto das clientes**, de preferência uma por serviço
       (progressiva, luzes/loiro, botox/selagem, hidratação, escova e corte); antes/depois é bem-vindo.
 - [ ] *(opcional)* Foto do Espaço Renova → entraria na seção "Onde estou".
 - [ ] *(opcional)* Texto "Minha história" da Ray → substitui o rascunho em `#sobre` no `index.html`.
@@ -25,6 +24,7 @@ Hoje o site usa só 2 recortes pequenos do print do Beacons.
 ## Quando as fotos chegarem
 1. Copie as fotos da galeria para `midia/originais/` (fora do git, ver `.gitignore`).
    A **primeira** em ordem alfabética também vira a foto do topo.
+   O nome vira a legenda da foto: `06-Selagem - antes.jpg` → "Selagem - antes".
 2. Rode: `python otimizar_fotos.py` → gera `midia/fotos/NN.webp` + miniaturas e reescreve `js/fotos.js`.
    Os cartões "Em breve" somem sozinhos quando houver 6+ fotos.
 3. Foto da Ray: converta e salve como `midia/fotos/ray.webp`, por exemplo:

@@ -42,13 +42,14 @@ menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", fecharMenu
 
 // ===== Galeria (lida de js/fotos.js, gerado pelo otimizar_fotos.py) =====
 const fotos = window.FOTOS || [];
+const descricao = (foto, i) => foto.legenda || `Trabalho da Ray Renova ${i + 1}`;
 const grade = document.getElementById("grade-galeria");
 
 fotos.forEach((foto, i) => {
   const item = document.createElement("button");
   item.className = "galeria-item revelar";
-  item.setAttribute("aria-label", `Ampliar foto ${i + 1}`);
-  item.innerHTML = `<img src="${foto.thumb}" width="${foto.w}" height="${foto.h}" loading="lazy" alt="Trabalho da Ray Renova ${i + 1}">`;
+  item.setAttribute("aria-label", `Ampliar foto: ${descricao(foto, i)}`);
+  item.innerHTML = `<img src="${foto.thumb}" width="${foto.w}" height="${foto.h}" loading="lazy" alt="${descricao(foto, i)}">`;
   item.addEventListener("click", () => abrirLightbox(i));
   grade.appendChild(item);
 });
@@ -71,7 +72,7 @@ let atual = 0;
 function mostrar(i) {
   atual = (i + fotos.length) % fotos.length;
   lbImg.src = fotos[atual].src;
-  lbImg.alt = `Trabalho da Ray Renova ${atual + 1}`;
+  lbImg.alt = descricao(fotos[atual], atual);
 }
 function abrirLightbox(i) {
   mostrar(i);
