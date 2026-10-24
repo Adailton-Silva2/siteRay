@@ -19,7 +19,11 @@ Pronto e publicado, já com as fotos reais da Ray (11 trabalhos na galeria + fot
 - [ ] *(opcional)* Texto "Minha história" da Ray → substitui o rascunho em `#sobre` no `index.html`.
 - [ ] *(opcional)* E-mail dela → rodapé.
 - [ ] Colocar o link do site no Beacons e na bio do Instagram.
-- [ ] *(futuro)* Domínio próprio (ex.: rayrenova.com.br no Registro.br).
+- [ ] Trocar o WhatsApp antigo (95444-3124) no Beacons/Instagram, se houver botão direto de WhatsApp.
+- [ ] *(futuro)* Domínio próprio — ver "Domínio próprio" abaixo.
+
+> Fotos: 3 da galeria mostram o rosto da cliente de perfil (03 Luzes, 05 Reconstrução e finalização, 11 Hidratação).
+> Se alguma cliente não puder aparecer, apague de `midia/originais/` e rode o script de novo.
 
 ## Quando as fotos chegarem
 1. Copie as fotos da galeria para `midia/originais/` (fora do git, ver `.gitignore`).
@@ -31,6 +35,16 @@ Pronto e publicado, já com as fotos reais da Ray (11 trabalhos na galeria + fot
    `python -c "from PIL import Image; Image.open('ray.jpg').convert('RGB').save('midia/fotos/ray.webp', quality=85)"`
 4. Se a foto do topo mudar, regenere `og-image.jpg` (prévia do link no WhatsApp, 1200×630).
 5. Publique: `git add . && git commit -m "Fotos reais" && git push` (o Pages atualiza em ~1 min).
+
+## Domínio próprio (mais barato)
+Domínio `rayrenova.com.br` no **Registro.br** (~R$ 40/ano, CPF, renovação no mesmo preço) +
+continuar no GitHub Pages (hospedagem e HTTPS grátis). Evitar pacotes "hospedagem + domínio grátis".
+1. Registrar em registro.br e pagar (Pix/boleto).
+2. No projeto: criar arquivo `CNAME` com `rayrenova.com.br`; trocar `og:url`/`og:image` no `<head>` do `index.html`.
+3. No Registro.br, DNS do domínio → registros **A** para os IPs do GitHub Pages
+   (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153) e **CNAME** `www` → `adailton-silva2.github.io`.
+4. GitHub → Settings → Pages: informar o domínio e marcar "Enforce HTTPS" (após o DNS propagar).
+   O endereço antigo passa a redirecionar sozinho.
 
 ## Onde mexer
 | O quê | Onde |
@@ -44,5 +58,8 @@ Pronto e publicado, já com as fotos reais da Ray (11 trabalhos na galeria + fot
 - SSH: chave `~/.ssh/id_ed25519_adailton-silva2`, cadastrada na conta **Adailton-Silva2**;
   `~/.ssh/config` usa essa chave para `github.com`.
 - O Git Credential Manager (HTTPS) está logado em **outra** conta (AdailtonSilva88) — por isso o remote é SSH.
+- Identidade do git ainda **não** configurada neste PC (commits saem com erro "Author identity unknown"). Configure uma vez:
+  `git config --global user.name "Adailton Silva"` e `git config --global user.email "developeradailton@gmail.com"`
+  (o e-mail precisa estar cadastrado na conta Adailton-Silva2 para os commits aparecerem no perfil).
 
 Plano original: `PLANO.md`. Print de referência do Beacons: `referencia/` (fora do git).

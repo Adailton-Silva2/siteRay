@@ -77,4 +77,6 @@ D:\Claude\RayRenova\
   (repo `Adailton-Silva2/siteRay`, push via SSH).
 - Mudanças em relação ao plano: favicon em SVG; galeria alimentada por `js/fotos.js`,
   gerado pelo `otimizar_fotos.py` (Pillow, sem ffmpeg); og:image com URL absoluta.
-- Pendente: fotos reais (veja a lista em `LEIA-ME.md`).
+- Fotos reais da Ray publicadas (11 na galeria, com legenda pelo nome do arquivo; foto da Ray; og-image refeita).
+- WhatsApp trocado para (11) 97830-3677.
+- Pendências restantes e passo a passo do domínio próprio: `LEIA-ME.md`.
