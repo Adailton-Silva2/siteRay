@@ -1,5 +1,5 @@
 // ===== Configuração =====
-const WHATSAPP = "5511954443124";
+const WHATSAPP = "5511978303677";
 const MENSAGEM = "Olá Ray! Vi seu site e gostaria de agendar um horário.";
 
 const linkWpp = (servico) => {

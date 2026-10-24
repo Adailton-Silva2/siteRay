@@ -35,7 +35,7 @@ Pronto e publicado, já com as fotos reais da Ray (11 trabalhos na galeria + fot
 ## Onde mexer
 | O quê | Onde |
 |---|---|
-| WhatsApp (5511954443124) e mensagem padrão | topo de `js/main.js` |
+| WhatsApp (5511978303677) e mensagem padrão | topo de `js/main.js` |
 | Serviços, textos, endereço/mapa | `index.html` (seções `#servicos`, `#sobre`, `#local`) |
 | Cores e fontes | variáveis em `:root` no `css/style.css` |
 | Prévia do link (og:image / og:url) | `<head>` do `index.html` |

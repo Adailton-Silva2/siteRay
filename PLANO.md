@@ -11,7 +11,7 @@ A Ray (mãe do usuário) é cabeleireira e hoje só tem uma página de links no 
 - Pilares: Cabelos Perfeitos · Inteligência de Cor · Estética
 - Serviços: progressiva, luzes, botox capilar, selagem, hidratação, escova e corte
 - Local: **Espaço Renova, Brás – São Paulo**
-- WhatsApp: **(11) 95444-3124** → `https://wa.me/5511954443124`
+- WhatsApp: **(11) 97830-3677** → `https://wa.me/5511978303677`
 - Paleta que segue o Beacons, só que mais sofisticada:
   - caramelo `#D1AD8A` (cor principal, igual ao Beacons)
   - areia clara `#F6EEE6` (fundos)
@@ -61,7 +61,7 @@ D:\Claude\RayRenova\
 3. Ativar o Pages (branch `main`, root) e conferir o link.
 
 ## Confirmado pelo usuário
-- WhatsApp: **(11) 95444-3124** → `https://wa.me/5511954443124` (este substitui o número do Instagram)
+- WhatsApp: **(11) 97830-3677** → `https://wa.me/5511978303677` (este substitui o número do Instagram)
 - Fotos da Ray: **podem ser usadas** (Hero/Sobre)
 - Endereço: **Rua Barão de Ladário, 585 – Brás, São Paulo/SP** (mapa: `https://www.google.com/maps?q=Rua+Barão+de+Ladário+585+Brás+São+Paulo&output=embed`)
 
