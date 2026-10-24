@@ -70,3 +70,11 @@ D:\Claude\RayRenova\
 - Botões de WhatsApp: abrem wa.me com o número e a mensagem certos.
 - Lightbox funcionando no celular.
 - Depois de publicar, mandar o link no WhatsApp e ver se a prévia aparece.
+
+---
+## Execução (24/10/2026)
+- Site implementado conforme o plano e publicado em https://adailton-silva2.github.io/siteRay/
+  (repo `Adailton-Silva2/siteRay`, push via SSH).
+- Mudanças em relação ao plano: favicon em SVG; galeria alimentada por `js/fotos.js`,
+  gerado pelo `otimizar_fotos.py` (Pillow, sem ffmpeg); og:image com URL absoluta.
+- Pendente: fotos reais (veja a lista em `LEIA-ME.md`).
